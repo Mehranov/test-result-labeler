@@ -2,6 +2,7 @@
 Label free-text lab results (Positive/Negative/Indeterminate/Unknown/Test not performed) using openai API.
 # Test Result Labeler (Malaria)
 
+## What it does: 
 This script classifies **free-text lab result statements** into one of:  
 **Positive**, **Negative**, **Indeterminate**, **Unknown**, or **Test not performed**,  
 and extracts **parasitemia %** if explicitly stated.
@@ -28,10 +29,10 @@ It combines simple **local heuristics** (regex cues) with **LLM-based labeling**
    python -m venv .venv
    source .venv/bin/activate   # Windows: .venv\Scripts\activate
    pip install -r requirements.txt   # or install pandas openai
-2. Set your API key
-  # macOS/Linux
+2. **Set your API key**
+  ### macOS/Linux
     export OPENAI_API_KEY="sk-..."
-  # Windows PowerShell
+  ### Windows PowerShell
     setx OPENAI_API_KEY "sk-..."
 ## Usage
 1. Place your input CSV with a column named raw_result somewhere accessible.
